@@ -28,8 +28,8 @@ public class BaseClass {
 	@Parameters("browser")
 	@BeforeClass(groups = {"RegressionSuite","smokesuite"})
 	public void bcConfig(/*String BROWSER*/) throws Throwable {
-		String BROWSER = futil.getdataFromPropertyFile("browser");
-		//String BROWSER=System.getProperty("browser");
+		//String BROWSER = futil.getdataFromPropertyFile("browser");
+		String BROWSER=System.getProperty("browser");
 		String URL = futil.getdataFromPropertyFile("url");
 		//Runtime polymorphism or method overRiding
 		if(BROWSER.equalsIgnoreCase("chrome")) {
